@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/lightbox.min.css">
+    <title>Encargar</title>
+</head>
+<body class="grid-container">
+	<header class="header">
+		<img class="nombre" src="images/nombre.png" alt="el taller de sally">
+		<nav>
+			<ul>
+                <li><a href="index.html">Inicio</a></li> <hr>
+				<li><a href="catalogo.html">Catálogo</a></li> <hr>
+				<li><a href="encargar.html">Encargar</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section class="main">
+		<h1 class="catalogoh1">☆ ENCARGAR ☆</h1>
+        <article class="formarticle">
+            <div>
+				<img class="logo" src="images/img.png">
+			</div>
+            <div class="completar">
+                <p>Para encargar por favor complete estos datos y nos pondremos en conctacto con usted para brindarle más información.</p>
+            </div>
+			<div class="formulario">
+				<form action="mailto:olisardon17@gmail.com" method="GET">
+					<label for="nombre">Ingrese su nombre</label> <br>
+					<input type="text" name="nombre" required> <br>
+					<label for="email">Ingrese su correo electronico</label> <br>
+					<input type="email" name="email" required> <br>
+					<button>Enviar</button> 
+                    <p>Antes de enviar revise que el cosplay que desea no se encuentra en el <a href="catalogo.html">catálogo</a></p>
+				</form>
+			</div>
+		</article>
+        <div class="container">
+            <button onclick="topFunction()" id="myBtn" title="Volver arriba">🡡</button> 
+        </div>
+	</section>
+	
+	<footer class="footer">
+		<img class="der" src="images/rosa.png" alt="rosa">
+		<p class="consulta">Por cualquier consulta pregunta en:</p>
+		<a href="#"><img src="images/ig.png" alt="instagram"></a>
+		<a href="#"><img src="images/wp.png" alt="whatsapp"></a>
+		<a href="#"><img src="images/fb.png" alt="facebook"></a>
+		<p>¡Envíos a todo el país!</p>
+		<img class="izq" src="images/rosa.png" alt="rosa">
+	</footer> 
+</body>
+<script>
+let buttonTop = document.getElementById("myBtn");
+
+window.onscroll = function() { 
+    scrollFunction()
+};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    buttonTop.style.display = "block";
+} else {
+    buttonTop.style.display = "none";
+}
+}
+function topFunction() {
+    document.body.scrollTop = 0; style:
+    document.documentElement.scrollTop = 0; 
+} 
+</script>
+</html>

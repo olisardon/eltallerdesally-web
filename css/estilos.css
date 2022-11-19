@@ -1,0 +1,983 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    scroll-behavior: smooth;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+}
+.grid-container > *{
+
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+	background-color: #D66488;
+	font-family: 'BIZ UDMincho', serif;
+    display: grid;
+    gap: 3px;
+    grid-template: 
+    "header" 180px
+    "main" auto
+    "footer" 80px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.h1{
+    font-size: 35px;
+    margin-top: 35px;
+
+}
+.header{
+    grid-area: header;
+	background-color: #DA9AFF;
+}
+header{
+display: grid;
+grid-template-rows: auto 50px 40px;
+grid-template-columns: 340px;
+justify-content: center;
+
+}
+header nav{
+    grid-row: 2/4;
+}
+header nav li{
+    list-style: none;
+
+}
+header nav ul li a{
+    font-size: 30px;
+    display: inline-block;
+}
+.catal{
+    margin-bottom: 10px;
+}
+.encargar{
+    margin-top: 10px;
+}
+
+.nombre{
+	width: 340px;
+	height: 60px;	
+}
+.main{
+    grid-area: main;
+    background-color: #64B9D6;
+}
+.article{
+    display: grid;
+    grid-template-rows: 100px 360px 340px;
+    justify-content: center;
+}
+.logo{
+	display: none;	
+}
+.catalogo{
+	max-width: 300px;
+    max-height: 300px;
+	filter: brightness(40%);
+	border-radius: 10px;
+	box-shadow: 4px 4px 12px black;
+}
+.cat{
+	max-width: 300px;
+    max-height: 300px;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.cat:hover{
+	transform: scale(1.1);
+	box-shadow: 15px 13px 37px black;
+}
+.cat p{
+	max-width: 300px;
+    max-height: 300px;
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(199,0,57, 0.8);
+	position: absolute;
+	top: 50%;
+	left: 52%;
+	transform: translate(-50%, -50%);
+}
+.encargo{
+	max-width: 300px;
+    max-height: 300px;
+	filter: brightness(60%);
+	border-radius: 10px;
+	box-shadow: 4px 4px 12px black;
+}
+.enc{
+	max-width: 300px;
+    max-height: 300px;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;	
+}
+.enc:hover{
+	transform: scale(1.1);
+	box-shadow: 15px 13px 37px black;
+}
+.enc p{
+	max-width: 300px;
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(199,0,57, 0.8);
+	position: absolute;
+	top: 50%;
+	left: 52%;
+	transform: translate(-50%, -50%);	
+}
+.elaboracion{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.cosplay {
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    gap: 8px;
+    margin-bottom: 4%;
+}
+.cosplay div{
+    background-color: #edcdff;
+    border: 2px dashed white;
+}
+.cosplay .anime img{
+    max-width: 60px;
+}
+.cosplay img{
+    max-width: 50px;
+    margin-top: 15px;
+}
+.cosplay p{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.container {
+    margin-top: 4%;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+  
+  .elementoCarousel {
+    display: none;
+}
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  .prev{
+    left: 0%;
+}
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+  .active, .dot:hover {
+    background-color: #717171;
+}
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  #myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 3%;
+    right: 4%; 
+    z-index: 99;
+    border: none; 
+    outline: none; 
+    background-color: white;
+    color: black; 
+    cursor: pointer; 
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+  
+#myBtn:hover {
+    background-color: #edcdff;
+}
+.visita p{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.catalogoh1{
+    font-size: 25px;
+    margin-top: 4%;
+    margin-bottom: 30px;
+}
+.galeria{
+    font-size: 30px;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+.categorianime{
+    background-color: #edcdff;
+    box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+    margin-bottom: 10%;
+    height: 1370px;
+}
+.categorianime img{
+    padding: 5px;
+    display: inline-block;
+    max-width: 260px;
+}
+.categoriajuegos{
+    background-color: #edcdff;
+    box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+    margin-bottom: 10%;
+    height: 1370px;
+}
+.categoriajuegos img{
+    padding: 5px;
+    display: inline-block;
+    max-width: 260px;
+}
+.categoriamascotas{
+    background-color: #edcdff;
+    box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+    margin-bottom: 10%;
+    height: 1370px;
+}
+.categoriamascotas img{
+    padding: 5px;
+    display: inline-block;
+    max-width: 260px;
+}
+.categoriaotros{
+    background-color: #edcdff;
+    box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+    margin-bottom: 5%;
+    height: 1370px;
+}
+.categoriaotros img{
+    padding: 5px;
+    display: inline-block;
+    max-width: 260px;
+}
+.iraencargar a {
+    text-decoration: underline;
+}
+.formarticle{
+    margin-top: 150px;
+    display: inline;
+    justify-content: center;
+}
+.formulario{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #edcdff;
+    height: 400px;
+    width: 550px;
+}
+.completar{
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+label{
+    font-size: 30px;
+}
+input{
+    width: 500px;
+    height: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.formulario p{
+    font-size: 20px;
+    margin-top: 50px;
+}
+form button{
+    font-family: 'BIZ UDMincho', serif;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+}
+.footer{
+    grid-area: footer;
+	background-color: #DA9AFF;
+    display: flex;
+    justify-content: space-between;
+}
+.footer img{
+	width: 38px;
+    margin-top: 12px;
+}
+.footer p{
+    font-size: 20px;
+    margin-top: 22px;
+}
+.consulta{
+    display: none;
+}
+.izq, .der{
+    height: 38px;
+}
+@media (min-width: 548px){
+    .categorianime{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 10%;
+        height: 840px;
+    }
+    .categoriajuegos{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 10%;
+        height: 840px;
+    }
+    .categoriamascotas{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 10%;
+        height: 840px;
+    }
+    .categoriaotros{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 840px;
+    }
+
+}
+@media (min-width: 600px){
+    .grid-container{
+        grid-template: 
+        "header header" 120px
+        "main   main" auto
+        "footer footer" 80px;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 140px 140px 100px 100px;
+        grid-template-rows: 50px 50px;
+        justify-content: space-evenly;
+    }
+    .nombre{
+        margin-left: 230px;
+        margin-top: 2%;
+        grid-column: 1/4;
+
+    }
+    hr{
+        display: none;
+    }
+    .catal{
+        margin-bottom: 0%;
+    }
+    .encargar{
+        margin-top: 0%;
+        margin-left: 50px;
+    }
+    nav ul li{
+        display: inline-block;
+    }
+    nav ul li a {
+        font-size: 25px;
+        margin-right: 40px;
+    }
+    header nav{
+        position: static;
+        margin-left: 50px;
+        margin-top: 20px;
+        grid-column: 1/5;
+        display: flex;
+        justify-content: center;
+    }
+    header nav a{
+        background-image: linear-gradient(50deg, #C70039, #C70039);
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        background-position: left bottom;
+        transition: background-size 700ms ease-in-out; 
+    }
+    
+    header nav a:hover {
+        background-size: 100% 2px;
+    }
+    .menu{
+        display: none;
+    }
+    .cosplay{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 120px);
+    }
+    .article{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: 80px 300px;
+        column-gap: 80px;
+        row-gap: 30px;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+    .h1{
+        grid-column: 1/3;
+        grid-row: 1/1;
+    }
+    .cat{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .enc{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .cat p{
+        transform: translate(-50%, -50%);
+    }
+    .enc p{
+        transform: translate(-50%, -50%);	
+    }
+    .prev, .next {
+        font-size: 40px;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .visita p{
+        font-size: 25px;
+    }
+    .catalogoh1{
+        font-size: 35px;
+        margin-top: 4%;
+    }
+    .galeria{
+        font-size: 30px;
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+    .categorianime{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 840px;
+    }
+    .categorianime img{
+        padding: 5px;
+        display: inline-block;
+        max-width: 260px;
+    }
+    .categoriajuegos{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 840px;
+    }
+    .categoriajuegos img{
+        padding: 5px;
+        display: inline-block;
+        max-width: 260px;
+    }
+    .categoriamascotas{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 840px;
+    }
+    .categoriamascotas img{
+        padding: 5px;
+        display: inline-block;
+        max-width: 260px;
+    }
+    .categoriaotros{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 840px;
+    }
+    .categoriaotros img{
+        padding: 5px;
+        display: inline-block;
+        max-width: 260px;
+    }
+    .iraencargar{
+        font-size: 25px;
+        margin-bottom: 3%;
+    }
+    .iraencargar a {
+        text-decoration: underline;
+    }
+    .completar{
+        font-size: 30px;
+        width: 400px;
+        margin-right: 35px;
+    }
+    .formarticle{
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .formulario{
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #edcdff;
+        height: 350px;
+        width: 550px;
+    }
+    form p{
+        font-size: 20px;
+        margin-top: 0%;
+    }
+    form a{
+        text-decoration: underline;
+    }
+    form a:hover{
+        color: #64B9D6;
+    }
+    label{
+        font-size: 25px;
+    }
+    input{
+        width: 55%;
+        height: 10%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    form button{
+     font-family: 'BIZ UDMincho', serif;
+     font-size: 20px;
+     margin-top: 20px;
+     width: 100px;
+    }
+    .footer img{
+        width: 50px;
+        margin-top: 5px;
+    }
+    .footer p{
+        font-size: 26px;
+        margin-top: 17px;
+    }
+    .izq, .der{
+        height: 50px;
+    }
+}
+@media (min-width: 816px){
+    .categorianime{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 8%;
+        height: 580px;
+    }
+    .categoriajuegos{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 8%;
+        height: 580px;
+    }
+    .categoriamascotas{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 8%;
+        height: 580px;
+    }
+    .categoriaotros{
+        background-color: #edcdff;
+        box-shadow: 0px 0px 17px 10px rgba(214,100,136,0.8);
+        margin-bottom: 5%;
+        height: 580px;
+    }
+}
+@media (min-width: 900px){
+    .grid-container{
+        grid-template: 
+        "header header header" 120px
+        "main   main   main" auto
+        "footer footer footer" 100px;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 580px auto 580px;
+        grid-template-rows: 0%;
+        justify-content: space-around;
+    }
+    .nombre{
+        margin-left: 0%;
+        grid-column: 1/2;
+        width: 490px;
+        height: 90px;
+    }
+    header nav{
+        display: flex;
+        margin-left: 15%;
+        margin-top: 38px;
+        grid-column: 3/4;
+    }
+    header ul li a{
+        font-size: 30px;
+        margin-right: 40px;
+    }
+    section{
+        grid-area: "main";
+    }
+    .article{
+        display: grid;
+        grid-template-columns: auto 280px 320px;
+        grid-template-rows: 80px 400px;
+        justify-content: space-evenly;
+        row-gap: 90px;
+        column-gap: 60px;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+    .h1{
+        grid-column: 2/4;
+        grid-row: 1/1;
+        display: inline;
+        position: static;
+        font-size: 40px;
+    }
+    .logo{
+        grid-column: 1/2;
+        display: flex;
+        width: 415px;
+        height: 590px;
+    }
+    .cat{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .enc{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .cat p{
+        transform: translate(-50%, -50%);
+    }
+    .enc p{
+        transform: translate(-50%, -50%);	
+    }
+    .elaboracion{
+        font-size: 40px;
+        margin-bottom: 3%;
+    }
+    .cosplay{
+        display: grid;
+        grid-template-columns: repeat(4, 360px);
+        grid-template-rows: 250px;
+    }
+    .cosplay p{
+        font-size: 40px;
+        position: static;
+        margin-top: 20%;
+    }
+    .cosplay .anime img{
+        max-width: 80px;
+    }
+    .cosplay img{
+        max-width: 70px;
+        margin-top: 15px;
+    }
+    .prev, .next {
+        font-size: 50px;
+    }
+      .text {
+        font-size: 30px;
+    }
+    .dot {
+        height: 20px;
+        width: 20px;
+    }
+    .numbertext {
+        font-size: 20px;
+    }
+    .visita{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        padding: 2px 20px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+    .visita:hover{
+        background-color: #edcdff;
+        box-shadow: 0  0 10px white, 0 0 40px white, 0 0 80px white;
+        transition-delay: 1s;
+    }
+    .visita span{
+        position: absolute;
+        display: block;
+    }
+    #span1{
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, white);
+    }
+    .visita:hover #span1{
+        left: 100%;
+        transition: 1s;
+    }
+    #span2{
+        top: -100%;
+        right: 0%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, white);
+    }
+    .visita:hover #span2{
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+    #span3{  
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, white);
+    }
+    .visita:hover #span3{
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    #span4{
+        bottom: -100%;
+        left: 0%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, white);
+    }
+    .visita:hover #span4{
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+    .visita p{
+        font-size: 35px;
+    }
+    .consulta{
+        display: flex;
+    }
+    .catalogoh1{
+        font-size: 43px;
+        margin-top: 4%;
+    }
+    .galeria{
+        font-size: 40px;
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+    .categorianime{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 600px;
+    }
+    .categorianime img{
+        max-width: 260px;
+    }
+    .categorianime img:hover{
+        filter: opacity(.6);
+    }
+    .categoriajuegos{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 600px;
+    }
+    .categoriajuegos img{
+        max-width: 260px;
+    }
+    .categoriajuegos img:hover{
+        filter: opacity(.6);
+    }
+    .categoriamascotas{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 600px;
+    }
+    .categoriamascotas img{
+        max-width: 260px;
+    }
+    .categoriamascotas img:hover{
+        filter: opacity(.6);
+    }
+    .categoriaotros{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 3%;
+        height: 600px;
+    }
+    .categoriaotros img{
+        max-width: 260px;
+    }
+    .categoriaotros img:hover{
+        filter: opacity(.6);
+    }
+    .iraencargar{
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+    .iraencargar a{
+        cursor: pointer;
+    }
+    .iraencargar a:hover {
+        color: #edcdff;
+    }
+    .completar{
+        font-size: 30px;
+        width: 400px;
+        margin-right: 35px;
+    }
+    .formarticle{
+        margin-top: 0%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .formulario{
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #edcdff;
+        height: 380px;
+        width: 550px;
+    }
+    form p{
+        font-size: 20px;
+        margin-top: 0%;
+    }
+    form a{
+        text-decoration: underline;
+    }
+    form a:hover{
+        color: #64B9D6;
+    }
+    label{
+        font-size: 25px;
+    }
+    input{
+        width: 55%;
+        height: 10%;
+        margin-top: 5%;
+    }
+    form button{
+     font-family: 'BIZ UDMincho', serif;
+     font-size: 20px;
+     margin-top: 20px;
+     width: 100px;
+    }
+    .footer a img{
+        width: 58px;
+        height: 58px;
+        margin-top: 15px;
+    }
+    .footer img{
+        width: 60px;
+        height: 60px;
+        margin-top: 20px;
+    }
+    .footer p{
+        font-size: 28px;
+        margin-top: 2%;
+    }
+    .der{
+        margin-left: 25px;
+    }
+    .izq{
+        margin-right: 25px;
+    }
+}
+@media (min-width: 1352px){
+    .categorianime{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 400px;
+    }
+    .categoriajuegos{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 400px;
+    }
+    .categoriamascotas{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        height: 400px;
+    }
+    .categoriaotros{
+        background-color: #edcdff;
+        border-radius: 10px;
+        margin-bottom: 3%;
+        height: 400px;
+    }
+}

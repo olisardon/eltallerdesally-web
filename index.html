@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>El Taller de Sally</title>
+</head>
+<body class="grid-container">
+	<header class="header">
+		<img class="nombre" src="images/nombre.png" alt="el taller de sally">
+		<nav>
+			<ul>
+                <li><a href="index.html">Inicio</a></li> <hr>
+				<li><a href="catalogo.html">Catálogo</a></li> <hr>
+				<li><a href="encargar.html">Encargar</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section class="main">
+        <article class="article">
+            <h1 class="h1">¿Qué deseas hacer?</h1>
+            <img class="logo" src="images/img.png" alt="logo">
+		    <div class="cat">
+			    <a href="catalogo.html">
+				    <img class="catalogo" src="images/catalogo.jpg" alt="catalogo">
+				    <p>Visitar catálogo</p>
+			    </a>		
+		    </div>
+		    <div class="enc">
+			    <a href="encargar.html"><img class="encargo" src="images/encargo.jpg"></a>
+			    <p>Encargar cosplay</p>	
+            </div>
+        </article>
+        <h1 class="elaboracion">Nuestras categorías de cosplays</h1>
+        <article class="cosplay">
+            <div class="anime">
+                <p>Anime</p>
+                <img src="images/anime.png" alt="anime">
+            </div>
+            <div class="videojuegos">
+                <p>Videojuegos</p>
+                <img src="images/consola.png" alt="consola">
+            </div>
+            <div class="mascotas">
+                <p>Mascotas</p>
+                <img src="images/huella.png" alt="huella">
+            </div>
+            <div class="otro">
+                <p>Otro</p>
+                <img src="images/kitsune.png" alt="kitsune">
+            </div>
+        </article>
+        <div class="container"> 
+
+            <div class="elementoCarousel fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="images/banner1.jpg" style="width:100%">
+                <div class="text">Anime</div>
+            </div>
+    
+            <div class="elementoCarousel fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="images/banner2.jpg" style="width:100%">
+                <div class="text">Videojuegos</div>
+            </div>
+    
+            <div class="elementoCarousel fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="images/banner3.jpg" style="width:100%">
+                <div class="text">Mascotas</div>
+            </div>
+    
+            <div class="elementoCarousel fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="images/banner4.jpg" style="width:100%">
+                <div class="text">Otro</div>
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <div style="text-align:center">
+            <span class="dot" onclick="slideActual(1)"></span>
+            <span class="dot" onclick="slideActual(2)"></span>
+            <span class="dot" onclick="slideActual(3)"></span>
+            <span class="dot" onclick="slideActual(4)"></span>
+        </div>
+    
+        <br>
+    
+        <div class="container">
+            <button onclick="topFunction()" id="myBtn" title="Volver arriba">🡡</button> 
+        </div>
+        <a href="catalogo.html" class="visita">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            <p>☆ Visita el catálogo para ver los cosplays disponibles ☆</p>
+        </a>
+	</section>
+	
+	<footer class="footer">
+		<img class="der" src="images/rosa.png" alt="rosa">
+		<p class="consulta">Por cualquier consulta pregunta en:</p>
+		<a href="#"><img src="images/ig.png" alt="instagram"></a>
+		<a href="#"><img src="images/wp.png" alt="whatsapp"></a>
+		<a href="#"><img src="images/fb.png" alt="facebook"></a>
+		<p>¡Envíos a todo el país!</p>
+		<img class="izq" src="images/rosa.png" alt="rosa">
+	</footer> 
+    <script>
+        let indiceSlide = 1;
+        mostrarSlides(indiceSlide);
+
+        function plusSlides(numero) {
+            mostrarSlides(indiceSlide += numero);
+        }
+
+        function slideActual(numero) {
+            mostrarSlides(indiceSlide = numero);
+        }
+
+        function mostrarSlides(numero) {
+            let slides = document.getElementsByClassName("elementoCarousel");
+            let indicadores = document.getElementsByClassName("dot");
+            if (numero > slides.length) { indiceSlide = 1 }
+            if (numero < 1) { indiceSlide = slides.length }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < indicadores.length; i++) {
+                indicadores[i].className = indicadores[i].className.replace(" active", "");
+            }
+
+            slides[indiceSlide - 1].style.display = "block";
+            indicadores[indiceSlide - 1].className += " active";
+        } 
+
+
+        let buttonTop = document.getElementById("myBtn");
+
+        window.onscroll = function() { 
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            buttonTop.style.display = "block";
+        } else {
+            buttonTop.style.display = "none";
+        }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; style:
+            document.documentElement.scrollTop = 0; 
+        } 
+    </script>
+</body>
+</html>
