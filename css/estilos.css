@@ -415,7 +415,7 @@ form button{
     .grid-container{
         grid-template: 
         "header header" 120px
-        "main   main" 895px
+        "main   main" auto
         "footer footer" 80px;
     }
     header{
